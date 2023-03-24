@@ -11,9 +11,15 @@ async function fetchWeather(city){
 }
 
 async function present(){
-    let laweather = await fetchWeather('los-angeles');
-    console.log(laweather.current);
-    console.log(laweather.location);
+    try{
+        let laweather = await fetchWeather('sdajofds');
+        console.log(laweather.current);
+        console.log(laweather.location);
+    } catch(e){
+        console.error(e);
+    } finally{
+        console.log('done');
+    }
 }
 
 present();
