@@ -1,3 +1,5 @@
+import { datatoDOM } from './domfuncs';
+
 const key = require('./api.json');
 
 const input = document.querySelector('#city');
@@ -18,11 +20,12 @@ async function mainWeather(){
     try{
         let cityname = input.value;
         let cityweather = await fetchWeather(cityname);
-        console.log(cityweather);
         if (cityweather.error != null){
             message.textContent = "Failure"
         } else{
             message.textContent = `Success for ${cityweather.location.name}`
+            console.log(cityweather.current);
+            datatoDOM(cityweather);
         }    
     } catch(error){
         console.log(error);
