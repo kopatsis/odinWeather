@@ -1,8 +1,8 @@
 function datatoDOM(weatherData){
     if (weatherData.location.country === "United States of America"){
-        document.querySelector('.title').textContent = `Here is the weather for ${weatherData.location.name}, ${weatherData.location.region}: `;
+        document.querySelector('.title').textContent = `Here is the Weather for ${weatherData.location.name}, ${weatherData.location.region}: `;
     } else{
-        document.querySelector('.title').textContent = `Here is the weather for ${weatherData.location.name}, ${weatherData.location.country}: `;
+        document.querySelector('.title').textContent = `Here is the Weather for ${weatherData.location.name}, ${weatherData.location.country}: `;
     }
     
     if (imperials.includes(weatherData.location.country)){
