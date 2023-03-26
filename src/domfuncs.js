@@ -31,9 +31,8 @@ function datatoDOM(weatherData){
                                                     ", " +
                                                     weatherData.location.localtime.slice(0,4);
 
-
-    console.log(weatherData.location);
-    console.log(weatherData.current);
+    // console.log(weatherData.location);
+    // console.log(weatherData.current);
 }
 
 const imperials = ["United States of America", "Liberia", "Myanmar"]
@@ -51,4 +50,4 @@ const monthConv = { 1: "January",
                     12: "December"
                 }
 
-export {datatoDOM, imperials}
+export {datatoDOM, imperials, monthConv}
