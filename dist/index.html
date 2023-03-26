@@ -10,12 +10,19 @@
 </head>
 <body>
 
-    <form method="POST" action="">
-        <label for="city">City Name:</label>
-        <input id="city" type="text" name="city" />
-    </form>
-    <button class="search">Search</button>
-    <div class="message"></div>
+    <div class="searcher">
+        <form method="POST" action="">
+            <label for="city">City Name:</label>
+            <input id="city" type="text" name="city" />
+            <input class="search" type="submit" value="Search"/>
+        </form>
+        <!-- <button class="search">Search</button> -->
+        <div class="message"></div>     
+    </div>
+    <div class="presenter">
+        <div class="title">Here's the weather for the city of </div>
+    </div>
+
     
 </body>
 </html>

@@ -1,6 +1,6 @@
 function datatoDOM(weatherData){
-    console.log(`Location: ${weatherData.location}`);
-    console.log(`Current: ${weatherData.current}`);
+    console.log(weatherData.location);
+    console.log(weatherData.current);
 }
 
 export {datatoDOM}

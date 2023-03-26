@@ -1,9 +1,11 @@
 import { datatoDOM } from './domfuncs';
 
 const key = require('./api.json');
+let def = "los-angeles";
 
 const input = document.querySelector('#city');
 const search = document.querySelector('.search');
+const form = document.querySelector('form');
 const message = document.querySelector('.message');
 
 async function fetchWeather(city){
@@ -14,22 +16,30 @@ async function fetchWeather(city){
     return weather;
 }
 
-search.addEventListener('click', mainWeather);
+form.addEventListener('submit', mainWeather);
 
-async function mainWeather(){
-    try{
-        let cityname = input.value;
+async function mainWeather(e){
+    e.preventDefault();
+
+    let cityname;
+    if (input.value === ''){
+        cityname = def;
+    } else {
+        cityname = input.value;
+    }
+
+    try{   
         let cityweather = await fetchWeather(cityname);
         if (cityweather.error != null){
-            message.textContent = "Failure"
+            message.textContent = `Failure for entry ${cityname}`;
         } else{
             message.textContent = `Success for ${cityweather.location.name}`
-            console.log(cityweather.current);
             datatoDOM(cityweather);
         }    
     } catch(error){
         console.log(error);
-        message.textContent = "Failure"
-    }  
+        message.textContent = `Failure for entry ${cityname}`;
+    } finally{
+        input.value = '';
+    }
 }
-
