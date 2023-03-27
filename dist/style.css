@@ -19,34 +19,34 @@ body{
 }
 
 .search{
-    font-size: 32px;
+    font-size: min(32px, 3.1vw);
     font-family: OpenSans;
     background: transparent;
     border: 0.1em solid white;
-    border-radius: 12px;
+    border-radius: min(1.45vw, 15px);
     color: white;
     cursor: pointer;
     padding-top: 0;
 }
 
 #city{
-    font-size: 32px;
+    font-size: min(32px, 3.1vw);
     font-family: 'Courier New', Courier, monospace;
     background: transparent;
     border: 0.1em solid white;
-    border-radius: 12px;
+    border-radius: min(1.45vw, 15px);
     color: white;
-    padding-left: 5px;
-    padding-top: 6px;
-    margin: 15px;
+    padding-left: min(6px, 0.58vw);
+    padding-top: min(6px, 0.58vw);
+    margin: min(1.45vw, 15px);
 }
 
 .searcher{
-    font-size: 32px;
+    font-size: min(32px, 3.1vw);
 }
 
 .head{
-    font-size: 64px;
+    font-size: min(64px, 6.2vw);
 }
 
 form{
@@ -65,7 +65,7 @@ form{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    font-size: 30px;
+    font-size: min(32px, 3.1vw);
     height: 50vh;
 }
 
@@ -74,5 +74,5 @@ form{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    font-size: 30px;
+    font-size: min(32px, 3.1vw);
 }
