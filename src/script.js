@@ -1,4 +1,5 @@
 import { datatoDOM } from './domfuncs';
+import { resetDOM } from './domfuncs';
 
 const key = require('./api.json');
 let def = "los-angeles";
@@ -32,13 +33,15 @@ async function mainWeather(e){
         let cityweather = await fetchWeather(cityname);
         if (cityweather.error != null){
             message.textContent = `Failure for entry ${cityname}`;
+            resetDOM();
         } else{
-            message.textContent = `Success for ${cityweather.location.name}`
+            message.textContent = '';
             datatoDOM(cityweather);
         }    
     } catch(error){
         console.log(error);
         message.textContent = `Failure for entry ${cityname}`;
+        resetDOM();
     } finally{
         input.value = '';
     }

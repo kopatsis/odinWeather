@@ -63,6 +63,18 @@ function backgroundEditor(condition){
     }
 }
 
+function resetDOM(){
+    document.body.style.background = "url(default.jpg)";
+    document.body.style.backgroundSize = "cover";
+    document.querySelector('.title').textContent = '';
+    document.querySelector('.time').textContent = '';
+    document.querySelector('.date').textContent = '';
+    document.querySelector('.temp').textContent = '';
+    document.querySelector('.wind').textContent = '';
+    document.querySelector('.condition').textContent = '';
+    document.querySelector('.humid').textContent = '';
+}
+
 const imperials = ["United States of America", "Liberia", "Myanmar"]
 const monthConv = { 1: "January", 
                     2: "February", 
@@ -78,4 +90,4 @@ const monthConv = { 1: "January",
                     12: "December"
                 }
 
-export {datatoDOM, backgroundEditor, imperials, monthConv}
+export {datatoDOM, backgroundEditor, resetDOM, imperials, monthConv}
