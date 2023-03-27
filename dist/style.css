@@ -1,3 +1,8 @@
+@font-face {
+    font-family: OpenSans;
+    src: url(OpenSans-VariableFont_wdth,wght.ttf);
+}
+
 body{
     background: url(default.jpg);
     background-size: cover; 
@@ -5,4 +10,69 @@ body{
     margin: 0;
     color: white;
     transition: 0.3s ease-in;
+    font-family: OpenSans;
+}
+
+.data {
+    font-family: 'Courier New', Courier, monospace;
+    text-shadow: 2px 0 0 #000, 0 -1px 0 #000, 0 2px 0 #000, -1px 0 0 #000;
+}
+
+.search{
+    font-size: 32px;
+    font-family: OpenSans;
+    background: transparent;
+    border: 0.1em solid white;
+    border-radius: 12px;
+    color: white;
+    cursor: pointer;
+    padding-top: 0;
+}
+
+#city{
+    font-size: 32px;
+    font-family: 'Courier New', Courier, monospace;
+    background: transparent;
+    border: 0.1em solid white;
+    border-radius: 12px;
+    color: white;
+    padding-left: 5px;
+    padding-top: 6px;
+    margin: 15px;
+}
+
+.searcher{
+    font-size: 32px;
+}
+
+.head{
+    font-size: 64px;
+}
+
+form{
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+
+.head-hold{
+    display: flex;
+    justify-content: center;
+}
+
+.data{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    height: 50vh;
+}
+
+.presenter{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
 }

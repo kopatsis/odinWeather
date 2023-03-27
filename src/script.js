@@ -32,7 +32,7 @@ async function mainWeather(e){
     try{   
         let cityweather = await fetchWeather(cityname);
         if (cityweather.error != null){
-            message.textContent = `Failure for entry ${cityname}`;
+            message.textContent = `Failed to find entry ${cityname}`;
             resetDOM();
         } else{
             message.textContent = '';
@@ -40,7 +40,7 @@ async function mainWeather(e){
         }    
     } catch(error){
         console.log(error);
-        message.textContent = `Failure for entry ${cityname}`;
+        message.textContent = `Failed to find entry ${cityname}`;
         resetDOM();
     } finally{
         input.value = '';

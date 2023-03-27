@@ -9,19 +9,24 @@
     <title>Weather App</title>
 </head>
 <body>
-    <div class="head">Your Friendly Fun Weather Finder</div>
+    <div class="head-hold">
+        <div class="head">Your Friendly Fun Weather Finder</div>
+    </div>
     <div class="searcher">
         <form method="POST" action="">
-            <label for="city">City Name:</label>
-            <input id="city" type="text" name="city" />
+            <label for="city">City Name: </label>
+            <input id="city" type="text" name="city" size="25" />
             <input class="search" type="submit" value="Search"/>
         </form>
         <!-- <button class="search">Search</button> -->
-        <div class="message"></div>     
     </div>
+    
     <div class="presenter">
         <div class="title">I will present the weather for the city of your choice below: </div>
-        <div class="data">
+        <div class="message"></div>
+    </div>
+    <div class="data">
+        <div class="data-house">
             <div class="present time"></div>
             <div class="present date"></div>
             <div class="present temp"></div>
@@ -29,7 +34,7 @@
             <div class="present condition"></div>
             <div class="present humid"></div>
         </div>
-    </div>
+     </div>
 
     
 </body>
